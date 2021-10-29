@@ -1,26 +1,28 @@
 {
-  "name": "vscode-example-test-adapter",
-  "displayName": "Example Test Explorer",
-  "description": "Run your Example tests in the Sidebar of Visual Studio Code",
-  "icon": "img/icon.png",
-  "author": "Holger Benl <hbenl@evandor.de>",
-  "publisher": "hbenl",
+  "name": "vscode-web-test-runner-explorer",
+  "displayName": "WebTestRunner Explorer",
+  "description": "Run your WebTestRunner tests in the Sidebar of Visual Studio Code",
+  "icon": "img/fake-tests.png",
+  "author": "stagas",
+  "publisher": "stagas",
   "version": "0.0.1",
   "license": "MIT",
-  "homepage": "https://github.com/hbenl/vscode-example-test-adapter",
+  "homepage": "https://github.com/stagas/vscode-web-test-runner-explorer",
   "repository": {
     "type": "git",
-    "url": "https://github.com/hbenl/vscode-example-test-adapter.git"
+    "url": "https://github.com/stagas/vscode-web-test-runner-explorer.git"
   },
   "bugs": {
-    "url": "https://github.com/hbenl/vscode-example-test-adapter/issues"
+    "url": "https://github.com/stagas/vscode-web-test-runner-explorer/issues"
   },
   "categories": [
-    "Other"
+    "Testing"
   ],
   "keywords": [
     "test",
-    "testing"
+    "testing",
+    "webtestrunner",
+    "web-test-runner"
   ],
   "main": "out/main.js",
   "scripts": {
@@ -32,17 +34,18 @@
     "publish": "vsce publish"
   },
   "dependencies": {
-    "tslib": "^1.9.3",
-    "vscode-test-adapter-api": "^1.7.0",
-    "vscode-test-adapter-util": "^0.7.0"
+    "@web/test-runner": "^0.13.20",
+    "tslib": "^1.14.1",
+    "vscode-test-adapter-api": "~1.7.0",
+    "vscode-test-adapter-util": "~0.7.1"
   },
   "devDependencies": {
-    "@types/vscode": "~1.23.0",
-    "typescript": "^3.5.3",
-    "vsce": "^1.95.1"
+    "@types/vscode": "^1.61.0",
+    "typescript": "^3.9.10",
+    "vsce": "^1.100.2"
   },
   "engines": {
-    "vscode": "^1.23.0"
+    "vscode": "^1.61.0"
   },
   "extensionDependencies": [
     "hbenl.vscode-test-explorer"
@@ -53,14 +56,14 @@
   "contributes": {
     "configuration": {
       "type": "object",
-      "title": "Example Test Explorer configuration",
+      "title": "WebTestRunner Explorer configuration",
       "properties": {
-        "exampleExplorer.logpanel": {
+        "webTestRunnerExplorer.logpanel": {
           "description": "write diagnotic logs to an output panel",
           "type": "boolean",
           "scope": "resource"
         },
-        "exampleExplorer.logfile": {
+        "webTestRunnerExplorer.logfile": {
           "description": "write diagnostic logs to the given file",
           "type": "string",
           "scope": "resource"

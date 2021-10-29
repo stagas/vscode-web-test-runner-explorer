@@ -1,14 +1,17 @@
 {
   "compilerOptions": {
     "target": "es2016",
-    "lib": [ "es2016" ],
+    "lib": [
+      "es2016"
+    ],
     "module": "commonjs",
     "outDir": "out",
     "importHelpers": true,
     "sourceMap": true,
     "strict": true,
+    "noImplicitAny": false,
     "noImplicitReturns": true,
-    "noUnusedLocals": true,
+    "noUnusedLocals": false,
     "removeComments": true,
     "skipLibCheck": true
   },
@@ -16,4 +19,3 @@
     "src/main.ts"
   ]
 }
-  
