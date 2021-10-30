@@ -83,7 +83,17 @@ const transformTestResult =
             tooltip: test.error.message,
             decorations: [
               {
-                line: +((test.error.stack ?? "").split(":")[1] ?? "-1") - 1, // 0-based
+                line:
+                  // get the last line of the stack trace (test case file)
+                  // and extract the line number to highlight in the editor
+                  // TODO: we should decorate all stack trace lines
+                  //  Update: ^ this isn't possible because only test files are
+                  //  being registered with the test api
+                  +(
+                    ((test.error.stack ?? "").split("\n").pop() ?? "").split(
+                      ":"
+                    )[1] ?? "-1"
+                  ) - 1, // 0-based
                 message: test.error.message,
               },
             ],
