@@ -5,7 +5,7 @@
   "icon": "img/fake-tests.png",
   "author": "stagas",
   "publisher": "stagas",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "MIT",
   "homepage": "https://github.com/stagas/vscode-web-test-runner-explorer",
   "repository": {
