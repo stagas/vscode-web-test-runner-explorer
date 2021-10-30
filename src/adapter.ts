@@ -126,16 +126,6 @@ export class ExampleAdapter implements TestAdapter {
 	*/
 
   /**
-   * Invalidates all the tests for the given files.  This works because the file paths are used ids for the tests suites.
-   * @param testFiles The files to invalidate the results for.
-   */
-  // private retireTestFiles(testFiles: string[]) {
-  //   this.retireEmitter.fire(<RetireEvent>{
-  //     tests: testFiles,
-  //   });
-  // }
-
-  /**
    * Marks all tests as retired.
    */
   private retireAllTests() {
